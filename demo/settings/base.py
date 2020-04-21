@@ -114,9 +114,12 @@ MEDIA_ROOT = os.path.join(VENV_PATH, 'media')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'home'
+
 
 # tutorials
-# https://www.youtube.com/watch?v=3aVqWaLjqS4&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=7
+# https://www.youtube.com/watch?v=FdVuKt_iuSI&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=8
 # 0:00
 
 
