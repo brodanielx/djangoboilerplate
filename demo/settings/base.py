@@ -120,7 +120,7 @@ LOGIN_REDIRECT_URL = 'home'
 
 # tutorials
 # https://www.youtube.com/watch?v=FdVuKt_iuSI&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=8
-# 0:00
+# 26:12
 
 
 
