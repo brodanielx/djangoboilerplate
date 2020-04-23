@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'crispy_forms',
 
     'core',
-    'users'
+    'users.apps.UsersConfig'
 ]
 
 MIDDLEWARE = [
@@ -119,8 +119,8 @@ LOGIN_REDIRECT_URL = 'home'
 
 
 # tutorials
-# https://www.youtube.com/watch?v=FdVuKt_iuSI&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=8
-# 26:12
+# https://www.youtube.com/watch?v=CQ90L5jfldw&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=9
+# 8:49
 
 
 
