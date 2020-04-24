@@ -24,9 +24,30 @@ def register(request):
 
 @login_required
 def profile(request):
+    user = request.user 
+    profile = user.profile
 
-    user_form = UserUpdateForm()
-    profile_form = ProfileUpdateForm()
+    if request.method == 'POST':
+        user_form = UserUpdateForm(request.POST, instance=user)
+        profile_form = ProfileUpdateForm(request.POST, 
+                                         request.FILES, 
+                                         instance=profile)
+        
+        if user_form.is_valid() and profile_form.is_valid():
+            if 'image' in request.FILES:
+                # delete olf profile pic and reset forms variables with user and profile instances
+                # may need to set form variables without instances above - check validation - example: username already exists
+                pass
+            user_form.save()
+            profile_form.save()
+
+            message = 'Your account has been updated!'
+            messages.success(request, message)
+            return redirect('profile')
+
+    else:
+        user_form = UserUpdateForm(instance=user)
+        profile_form = ProfileUpdateForm(instance=profile)
 
     context = {
         'user_form' : user_form,
